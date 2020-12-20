@@ -613,12 +613,49 @@
 // 原型prototype function对象的一个属性
 // console.log(Test.prototype) // 对象
 // 构造函数
-function Foo(name, age) {
-    this.name = name
-    this.age = age
+// function Foo(name, age) {
+//     this.name = name
+//     this.age = age
+// }
+
+// Foo.prototype.sex = '男士'
+// var foo = new Foo('wuhuiuo', 21)
+// console.log(foo.name);
+// console.log(foo.sex);
+
+// Car.prototype.name = 'Benz'
+
+// function Car() {}
+// console.log(Car.prototype)
+// Car.prototype = {
+//     name: 'wuhuiluo'
+// }
+// var car = new Car()
+// console.log(car.name)
+Professor.prototype.tSkill = 'Java'
+
+function Professor() {}
+var professor = new Professor()
+
+Teacher.prototype = professor
+
+function Teacher() {
+    this.mSkill = 'js'
+    this.success = {
+        alibaba: '28',
+        tencent: '30'
+    }
 }
 
-Foo.prototype.sex = '男士'
-var foo = new Foo('wuhuiuo', 21)
-console.log(foo.name);
-console.log(foo.sex);
+var teacher = new Teacher()
+
+Student.prototype = teacher
+
+function Student() {
+    this.pSkill = 'html'
+}
+
+var student = new Student()
+student.success.baidu = '100'
+student.success.tencent = '50'
+console.log(teacher,student)
