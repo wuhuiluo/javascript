@@ -632,30 +632,153 @@
 // }
 // var car = new Car()
 // console.log(car.name)
-Professor.prototype.tSkill = 'Java'
+// Professor.prototype.tSkill = 'Java'
 
-function Professor() {}
-var professor = new Professor()
+// function Professor() {}
+// var professor = new Professor()
 
-Teacher.prototype = professor
+// Teacher.prototype = professor
 
-function Teacher() {
-    this.mSkill = 'js'
-    this.success = {
-        alibaba: '28',
-        tencent: '30'
-    }
+// function Teacher() {
+//     this.mSkill = 'js'
+//     this.students = 500
+//     // this.success = {
+//     //     alibaba: '28',
+//     //     tencent: '30'
+//     // }
+// }
+
+// var teacher = new Teacher()
+
+// Student.prototype = teacher
+
+// function Student() {
+//     this.pSkill = 'html'
+// }
+
+// var student = new Student()
+// console.log(student.students)
+// student.students++
+// console.log(student, teacher)
+// // student.success.baidu = '100'
+// // student.success.tencent = '50'
+// console.log(teacher, student)
+
+// 原型链的顶端是Object.prototype
+// let obj = {
+//     name: 'wuhuiluo'
+// }
+// obj.name = 21
+// console.log(obj.name)
+// function Car() {
+//     this.brand = 'Benz'
+// }
+// Car.prototype = {
+//     brand: 'Mazda',
+//     intro: function () {
+//         console.log(`我是${this.brand}车`)
+//     }
+// }
+// var car = new Car()
+// car.intro()
+// function Obj() {}
+// Obj.prototype.num = 1
+// var obj1 = Object.create(Obj.prototype)
+// var obj2 = new Obj()
+// console.log(obj1)
+// console.log(obj2)
+// var obj = Object.create(null)
+// obj.num = 1
+// var obj1 = {
+//     count: 2
+// }
+// obj.__proto__ = obj1
+// // console.log(obj)
+// // console.log(obj1)
+// console.log(obj.count)
+// var num = 1
+// var obj = {}
+// var obj1 = Object.create(null)
+// document.write(num)
+// document.write(obj)
+// document.write(obj1)
+// function Car(brand, color) {
+//     this.brand = brand
+//     this.color = color
+// }
+// let newCar = {}
+// Car.call(newCar, 'Benz', 'red')
+// console.log(newCar)
+// var car = {
+//     brand: 'benz',
+//     color: 'red',
+//     lang: '5',
+//     width: '2.5'
+// }
+
+// for (var key in car) {
+//     console.log(car[key])
+//     console.log(car.key)
+// }
+// function Car() {
+//     this.brand = 'benz'
+//     this.color = 'red'
+//     this.displacement = '3.0'
+// }
+
+// Car.prototype = {
+//     lang: 5,
+//     width: 2.5
+// }
+
+// Object.prototype.name = 'object'
+// var car = new Car()
+// for (var key in car) {
+//     if (car.hasOwnProperty(key)) {
+//         console.log(`${key}: ${car[key]}`);
+//     }
+// }
+// function Car() {}
+// var car = new Car()
+// function Person() {}
+// var p = new Person()
+// console.log(car instanceof Car);
+// console.log(car instanceof Object);
+// console.log([] instanceof Array);
+// console.log([] instanceof Object);
+// console.log({} instanceof Object);
+// function test(b) {
+//     this.d = 3
+//     console.log(this)
+//     this.a = 100
+//     var a = 1
+
+//     function c() {}
+// }
+// var Test = new test()
+// console.log(d);
+// console.log(a);
+// numer string boolean object function undefined
+// function b(x, y, a) {
+//     arguments[2] = 10
+//     console.log(a);
+// }
+// b(1, 2, 3)
+var a = '1'
+
+function test() {
+    var a = '2'
+    this.a = '3'
+    console.log(a)
 }
+test()
+new test()
+console.log(a)
 
-var teacher = new Teacher()
+// AO = {
+//     a: undefined
+// }
 
-Student.prototype = teacher
-
-function Student() {
-    this.pSkill = 'html'
-}
-
-var student = new Student()
-student.success.baidu = '100'
-student.success.tencent = '50'
-console.log(teacher,student)
+// GO = {
+//     a: undefined 
+// }
