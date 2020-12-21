@@ -764,16 +764,16 @@
 //     console.log(a);
 // }
 // b(1, 2, 3)
-var a = '1'
+// var a = '1'
 
-function test() {
-    var a = '2'
-    this.a = '3'
-    console.log(a)
-}
-test()
-new test()
-console.log(a)
+// function test() {
+//     var a = '2'
+//     this.a = '3'
+//     console.log(a)
+// }
+// test()
+// new test()
+// console.log(a)
 
 // AO = {
 //     a: undefined
@@ -782,3 +782,97 @@ console.log(a)
 // GO = {
 //     a: undefined 
 // }
+
+// let arr = ['whl', 'whuiluo', 'liu']
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+// for(let key in arr) {
+//     console.log(key);
+// }
+// arr.forEach((item,index,arr) => {
+//     console.log(item,index,arr);
+// })
+
+// const arr = [1,4,9,16]
+// const result = arr.map(Math.sqrt)
+// console.log(result)
+// let arr = [1, 2, 3, 4, 5]
+
+// let newArr = arr.filter((cur, index) => {
+//     console.log(cur, index)
+//     return cur % 2 == 0
+// })
+// let arr = ['wuhuiluo','12345','789']
+// let keys = arr.keys()
+// let values = arr.values()
+// let entry = arr.entries()
+// for(let item of keys) {
+//     console.log(item)
+// }
+// for(let item of values) {
+//     console.log(item)
+// }
+// for(let item of entry) {
+//     console.log(item)
+// }
+// let a = 'hello world'
+
+// function first() {
+//     console.log('inside first function')
+//     second()
+//     console.log('again inside first function')
+// }
+
+// function second() {
+//     console.log('Inside second function');
+// }
+
+// first()
+// console.log('Inside Global Excution Context')
+// this指向全局对象window
+// 被一个引用对象** 调用 **
+// let foo = {
+//     baz: function () {
+//         console.log(this);
+//     }
+// }
+
+// foo.baz()
+
+// let bar = foo.baz
+// bar()
+// call apply bind new
+// 隐式绑定 显式绑定 window绑定 new绑定
+// const user = {
+//     name: 'wuhuiluo',
+//     age: 27,
+//     greet() {
+//         console.log(`hello I am ${this.name}`);
+//     },
+//     mother: {
+//         name: '123456',
+//         greet() {
+//             console.log(`hello I am ${this.name}`);
+//         }
+//     }
+// }
+// user.greet()
+// user.mother.greet()
+// function greet(lang1, lang2, lang3) {
+//     alert(`hello,My name is ${this.name} and I know ${lang1},${lang2},${lang3}`)
+// }
+// const user = {
+//     name: 'wuhuiluo',
+//     age: 27
+// }
+// const languages = ['Javascript', 'Python', 'JavaEE']
+// // greet.call(user, languages[0], languages[1], languages[2])
+// greet.apply(user, languages)
+window.age = 10
+
+function sayAge() {
+    alert(`hello my age is ${this.age}`)
+}
+sayAge()
