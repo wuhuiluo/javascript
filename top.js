@@ -870,9 +870,143 @@
 // const languages = ['Javascript', 'Python', 'JavaEE']
 // // greet.call(user, languages[0], languages[1], languages[2])
 // greet.apply(user, languages)
-window.age = 10
+// window.age = 10
 
-function sayAge() {
-    alert(`hello my age is ${this.age}`)
-}
-sayAge()
+// function sayAge() {
+//     alert(`hello my age is ${this.age}`)
+// }
+// sayAge()
+// var str = '([})'
+
+// function isValid(s) {
+//     if (s.length % 2 === 1) {
+//         return false
+//     }
+//     const stack = []
+//     for (let i = 0; i < s.length; i++) {
+//         const c = s[i]
+//         if (c === '(' || c === '{' || c === '[') {
+//             stack.push(c)
+//         } else {
+//             const t = stack[stack.length - 1]
+//             if (t === '{' && c === '}' || t === '[' && c === ']' || t === '(' && c === ')') {
+//                 stack.pop()
+//             } else {
+//                 return false
+//             }
+//         }
+//     }
+//     return stack.length === 0
+// }
+// const result = isValid(str)
+// console.log(result);
+// 用js模拟虚拟DOM
+// {
+//     tag: 'div',
+//     props: {
+//         id: 'app',
+//         className: 'container'
+//     },
+//     children: [{
+//             tag: 'h1',
+//             children: '虚拟DOM'
+//         },
+//         {
+//             tag: 'ul',
+//             props: {
+//                 style: 'color: orange'
+//             },
+//             children: [{
+//                     tag: 'li',
+//                     children: '第一项'
+//                 },
+//                 {
+//                     tag: 'li',
+//                     children: '第二项'
+//                 },
+//                 {
+//                     tag: 'li',
+//                     chidlren: '第三项'
+//                 }
+//             ]
+//         }
+//     ]
+// }
+
+// 引入snabbdom库
+// const snabbdom = window.snabbdom
+// 将vnode(虚拟节点) 塞入空的容器中
+
+// const patch = snabbdom.init([
+//     snabbdom_class,
+//     snabbdom_props,
+//     snabbdom_style,
+//     snabbdom_eventlisteners
+// ])
+
+// 创建vnode(虚拟节点)
+// const h = snabbdom.h
+
+// // 空的容器
+
+// const container = document.getElementById('container')
+
+// // 创建vnode 
+// const vnode = h('ul#list', {}, [
+//     h('li.item', {}, '第一项'),
+//     h('li.item', {}, '第二项')
+// ])
+
+// patch(container, vnode)
+
+// const fun1 = () => {
+//     fun2()
+// }
+
+// const fun2 = () => {
+//     fun3()
+// }
+// const fun3 = () => {}
+// fun1()
+// const queue = []
+// queue.push(1)
+// queue.push(2)
+// let item1 = queue.shift()
+// let item2 = queue.shift()
+// let a = 5
+// let b = {
+//     name: 'wuhuiluo'
+// }
+
+// function test(a,b) {
+//     a = 29
+//     b.name = '666'
+// }
+// test(a,b)
+// console.log(a);
+// console.log(b.name);
+// function max(a, b) {
+//     console.log(arguments);
+//     if (a > b) {
+//         return a
+//     } else {
+//         return b
+//     }
+// }
+// var t = max(10, 9, 100, 40)
+// console.log(t);
+// function myMax() {
+//     if (arguments.length < 0) {
+//         return
+//     }
+//     let max = arguments[0]
+//     for (let i = 1; i < arguments.length; i++) {
+//         if (arguments[i] > max) {
+//             max = arguments[i]
+//         }
+//     }
+//     return max
+// }
+
+// let t = myMax(12345, 123456,999999)
+// console.log(t);
