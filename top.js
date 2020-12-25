@@ -1035,3 +1035,46 @@
 //     }(i))
 // }
 // console.log(i)
+
+// const isPregnant = false
+
+// const promise = new Promise((resolve, reject) => {
+//     if (isPregnant) {
+//         resolve('孩子他爹')
+//     } else {
+//         reject('老公')
+//     }
+// })
+
+// promise.then(name => {
+//     console.log(`男人成为了${name}`)
+// }).catch(name => {
+//     console.log(`男人成为了${name}`);
+// }).finally(() => {
+//     console.log('他们最后结婚了');
+// })
+
+const imgAddress = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fclipartmag.com%2Fimages%2Fbird-cartoon-image-45.png&refer=http%3A%2F%2Fclipartmag.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611480242&t=832d6acfa87d4a52db11e187b8ca0f4a'
+
+
+const imgPromise = (url) => {
+    return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.src = url
+        console.log(img);
+        img.onload = () => {
+            resolve(img)
+        }
+        img.onerror = () => {
+            reject(new Error('图片有误'))
+        }
+    })
+}
+
+imgPromise(imgAddress)
+    .then(img => {
+        document.body.appendChild(img)
+    })
+    .catch(error => {
+        document.body.innerHTML = error
+    })
