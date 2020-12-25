@@ -1010,3 +1010,28 @@
 
 // let t = myMax(12345, 123456,999999)
 // console.log(t);
+
+// function cache() {
+//     const data = {} // 闭包中的数据
+//     return {
+//         set: function (key, value) {
+//             data[key] = value
+//         },
+//         get: function (key) {
+//             return data[key]
+//         }
+//     }
+// }
+// let c = cache()
+// console.log(c)
+// c.set('a', 100)
+// let b = c.get('a')
+// console.log(b);
+// for (var i = 0; i < 5; i++) {
+//     (function (x) {
+//         setTimeout(() => {
+//             console.log(x++);
+//         })
+//     }(i))
+// }
+// console.log(i)
