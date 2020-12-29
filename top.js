@@ -1081,4 +1081,53 @@
 
 // 构造函数 实例 原型对象
 // 所有类型的对象都可以看作是相应的构造函数创建出来的
-Function.prototype.constructor()
+// Function.prototype.constructor()
+// 对象分为普通对象和函数对象
+// 函数对象: Object、Fuction均是js自带的函数对象
+// var o1 = {}
+// var o2 = new Object()
+// var o3 = new f1()
+
+// function f1() {}
+
+// function f2() {}
+// var f3 = new Function('str', 'console.log(str)')
+
+// console.log(typeof Object)
+// console.log(typeof Function)
+
+// console.log(typeof f1)
+// console.log(typeof f2)
+// console.log(typeof f3);
+
+// console.log(typeof o1);
+// console.log(typeof o2);
+// console.log(typeof o3);
+// 构造函数
+// function Person(name, age, job) {
+//     this.name = name
+//     this.age = age
+//     this.job = job
+//     this.sayHi = function () {
+//         console.log(this.job);
+//     }
+// }
+
+// var person1 = new Person('123', 12, 'abc') // 实例
+// var person2 = new Person('456', 111, 'kob') // 实例
+// console.log(person1.constructor === Person)
+// console.log(person2.constructor === Person);
+// function Person() {} // 函数对象
+// Person.prototype.name = 'whl' 
+// Person.prototype.say = function() {
+//     console.log('abc')
+// }
+// var person1 = new Person
+// console.log(Person.prototype.constructor === Person)
+// function Person() {}
+// console.log(Person.prototype);
+
+function Person() {}
+var person = new Person()
+// 实例对象的__proto__属性指向该构造函数的原型对象
+console.log(person.__proto__ === Person.prototype);
