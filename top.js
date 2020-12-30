@@ -1127,7 +1127,60 @@
 // function Person() {}
 // console.log(Person.prototype);
 
-function Person() {}
-var person = new Person()
-// 实例对象的__proto__属性指向该构造函数的原型对象
-console.log(person.__proto__ === Person.prototype);
+// function Person() {}
+// var person = new Person()
+// // 实例对象的__proto__属性指向该构造函数的原型对象
+// console.log(person.__proto__ === Person.prototype);
+
+// 实例对象 构造函数 原型对象
+
+// Function Object prototype __proto__
+// 构造函数 Array String
+// funtion Object
+// function Function
+// 实例对象上的__proto__指向原型对象
+// .__proto__ Function.prototype
+// String Array Number Function Object 都是function
+// function Obj(props = {}) {
+//     this.name = props.name
+//     this.age = props.age
+// }
+// const obj2 = new Obj({
+//     name: 'wuhuiluo'
+// })
+// console.log(obj2);
+// console.log(obj2.constructor === Obj)
+// console.log(obj2.__proto__ === Obj.prototype)
+// 函数对象和普通对象
+// Javascript中Object和Function就是函数对象
+function fun1() {};
+const func2 = function () {}
+const func3 = new Function('name', 'console.log(name)')
+
+const obj1 = {}
+const obj2 = new Object()
+const obj3 = new fun1()
+const obj4 = new new Function()
+// 这些都是函数对象
+// console.log(typeof Object) // function
+// console.log(typeof Function) // function
+// console.log(typeof fun1) // function
+// console.log(typeof func2) // function
+// console.log(typeof func3) // function
+
+// console.log(obj1)
+// console.log(obj2);
+// console.log(obj3);
+// console.log(obj4);
+
+// console.log(Function.__proto__ === Function.prototype)
+
+// __proto__ constructor 都是对象独有的 prototype 是函数独有的
+// function Person() {}
+// var person1 = new Person()
+// console.log(person1.__proto__.constructor === Person);
+// number undefined symbol string function boolean object
+// let s = new String('abc')
+// console.log(typeof s);
+// console.log(typeof null);
+// console.log(typeof undefined);
