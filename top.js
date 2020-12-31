@@ -1184,3 +1184,23 @@ const obj4 = new new Function()
 // console.log(typeof s);
 // console.log(typeof null);
 // console.log(typeof undefined);
+// function Person(name, age) {
+//     this.name = name
+//     this.age = age
+//     this.sex = 'male'
+// }
+
+// Person.prototype.isHandSome = true
+
+// Person.prototype.sayName = function () {
+//     console.log(`hello, my name is ${this.name}`)
+// }
+
+// let boy = new Person('wuhuiluo', 25)
+
+// console.log(boy.name);
+// console.log(boy.sex);
+// console.log(boy.isHandSome);
+
+// boy.sayName()
+Object.prototype.__proto__ === null
