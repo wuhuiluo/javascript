@@ -1204,3 +1204,7 @@ const obj4 = new new Function()
 
 // boy.sayName()
 Object.prototype.__proto__ === null
+
+function Person(name) {
+    this.name = name
+}
