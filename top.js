@@ -1203,8 +1203,76 @@ const obj4 = new new Function()
 // console.log(boy.isHandSome);
 
 // boy.sayName()
-Object.prototype.__proto__ === null
+// Object.prototype.__proto__ === null
 
-function Person(name) {
-    this.name = name
+// function Father(name) {
+//     this.name = name
+// }
+
+// let son = new Father('wuhuiluo')
+// console.log(son);
+// uml期末考试 操作系统
+// function Star(name, age) {
+//     // 实例成员
+//     this.name = name
+//     this.age = age
+// }
+
+// Star.sex = '男' // 静态成员
+
+// let stars = new Star('小红', 18)
+
+// console.log(stars);
+// console.log(stars.sex); // undefined 实例无法访问静态成员
+
+// function Father(name) {
+//     this.name = name
+// }
+
+// let son = new Father('wuhuiluo')
+// console.log(son);
+// function Star() {
+//     this.sing = function () {
+//         console.log('我爱唱歌');
+//     }
+// }
+
+// let stu1 = new Star()
+// let stu2 = new Star()
+// stu1.sing()
+// stu2.sing()
+// console.log(stu1.sing === stu2.sing);
+// function Star() {
+//     this.name = name
+// }
+
+// Star.prototype.sing = function () {
+//     console.log('我爱唱歌', this.name);
+// }
+// let stu1 = new Star('123456')
+// let stu2 = new Star('789456')
+
+// stu1.sing()
+// stu2.sing()
+// console.log(stu1.sing === stu2.sing);
+function Star(name) {
+    this.name = name;
+
+    //   (1) 首先看obj对象身上是否有dance方法， 如果有， 则执行对象身上的方法
+    this.dance = function () {
+        console.log(this.name + '1');
+    }
 }
+
+//(2) 如果没有dance方法， 就去构造函数原型对象prototype身上去查找dance这个方法。
+Star.prototype.dance = function () {
+    console.log(this.name + '2');
+};
+
+//(3) 如果再没有dance方法， 就去Object原型对象prototype身上去查找dance这个方法。
+Object.prototype.dance = function () {
+    console.log(this.name + '3');
+};
+//(4) 如果再没有， 则会报错。
+let obj = new Star('小红');
+obj.dance();
