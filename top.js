@@ -1291,13 +1291,62 @@ const obj4 = new new Function()
 // res1.then(data => {
 //     console.log(data);
 // })
-!(async function() {
-    const p1 = Promise.resolve(300)
-    const data = await p1
-    console.log(data);
-})()
+// async function fn1() {
+//     return 100
+// }
+// !(async function() {
+//     const p1 = Promise.resolve(300)
+//     const data = await p1
+//     console.log(data);
+// })()
 
-!(async function(){
-    const p1 = await 400 // await Promise.resolve(400)
-    console.log(p1);
-})()
+// !(async function(){
+//     const p1 = await 400 // await Promise.resolve(400)
+//     console.log(p1);
+// })()
+
+// !(async function() {
+//     const data = await fn1()
+//     console.log(data);
+//     console.log(data);
+// })()
+// !(async function () {
+//     const p4 = Promise.reject('err')
+//     try {
+//         const data = await p4
+//         console.log(data);
+//     } catch (err) {
+//         console.error(err)
+//     }
+// })()
+// async function muti(num) {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve(num * num)
+//         }, 1000)
+//     })
+// }
+// const nums = [1, 2, 3]
+
+// nums.forEach(async item => {
+//     const res = await muti(item)
+//     console.log(123);
+//     console.log(res);
+// })
+// async function muti(num) {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve(num * num)
+//         }, 1000)
+//     })
+// }
+// const nums = [1,2,3]
+// !(async function() {
+//     for(let item of nums) {
+//         let res = await muti(item)
+//         console.log(res);
+//     }
+// })()
+// 宏任务: setTimeout setInterval Ajax DOM时间
+// 微任务: Promise async/await
+// 微任务执行时机比宏任务要早
